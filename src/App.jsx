@@ -1,11 +1,13 @@
 import * as React from 'react'
 import Button from './Button'
+import Card from './Card'
+import Pagination from './Pagination'
 
 export default () => {
   return (
     <div>
-      <Button isActive={true}>Active</Button>
-      <Button isActive={false}>Not active</Button>
+      <Card />
+      <Card isActive />
     </div>
   )
 }

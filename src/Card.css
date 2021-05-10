@@ -1,0 +1,28 @@
+.Card {
+  box-shadow: 10px 10px;
+  background-color: tomato;
+  width: 300px;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.Card__bookmark {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  border: 20px solid lightgray;
+  border-bottom-color: transparent;
+  height: 20px;
+  width: 0;
+}
+
+.Card__bookmark--selected {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  border: 20px solid black;
+  border-bottom-color: transparent;
+  height: 20px;
+  width: 0;
+}
