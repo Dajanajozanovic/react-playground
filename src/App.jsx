@@ -5,7 +5,7 @@ export default () => {
   return (
     <div>
       <Button isActive={true}>Active</Button>
-      <Button isActive={false}>notActive</Button>
+      <Button isActive={false}>Not active</Button>
     </div>
   )
 }
