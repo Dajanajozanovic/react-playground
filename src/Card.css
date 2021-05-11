@@ -21,3 +21,11 @@
 .hidden {
   display: none;
 }
+
+.input-tags {
+  background-color: chartreuse;
+  margin: 8px;
+  width: 120px;
+  border: none;
+  border-radius: 6px;
+}

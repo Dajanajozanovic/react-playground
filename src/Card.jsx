@@ -6,12 +6,18 @@ export default function Card({
   questionText,
   answerText,
   isAnswerVisible,
+  inputTag1,
+  inputTag2,
+  inputTag3,
 }) {
   return (
     <section className="Card">
       <h2>{title}</h2>
       <p>{questionText}</p>
       <p className={isAnswerVisible ? 'answerText' : 'hidden'}>{answerText}</p>
+      <div className="input-tags">{inputTag1}</div>
+      <div className="input-tags">{inputTag2}</div>
+      <div className="input-tags">{inputTag3}</div>
     </section>
   )
 }

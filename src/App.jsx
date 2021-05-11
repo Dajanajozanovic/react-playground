@@ -5,14 +5,17 @@ const cards = [
   {
     title: 'Frage',
     questionText: 'Wie geht es Dir?',
-    answerText: 'Prima!',
-    isAnswerVisible: false,
+    inputTag1: 'Prima',
+    inputTag2: 'Super',
+    inputTag3: 'bestens',
     id: 1,
   },
   {
     title: 'Frage',
     questionText: 'Was machst Du?',
-    answerText: 'Codes schreiben!',
+    inputTag1: 'Codes schreiben',
+    inputTag2: 'lesen',
+    inputTag3: 'schlafen',
     isAnswerVisible: true,
     id: 2,
   },
@@ -21,15 +24,27 @@ const cards = [
 export default () => {
   return (
     <div className="App">
-      {cards.map(({ id, title, questionText, answerText, isAnswerVisible }) => (
-        <Card
-          key={id}
-          title={title}
-          isAnswerVisible={isAnswerVisible}
-          questionText={questionText}
-          answerText={answerText}
-        />
-      ))}
+      {cards.map(
+        ({
+          id,
+          title,
+          questionText,
+          inputTag1,
+          inputTag2,
+          inputTag3,
+          isAnswerVisible,
+        }) => (
+          <Card
+            key={id}
+            title={title}
+            isAnswerVisible={isAnswerVisible}
+            questionText={questionText}
+            inputTag1={inputTag1}
+            inputTag2={inputTag2}
+            inputTag3={inputTag3}
+          />
+        )
+      )}
     </div>
   )
 }
