@@ -1,16 +1,17 @@
 import * as React from 'react'
 import './Card.css'
 
-export default function Card({ title, copyText, isBookmarked }) {
-  const bookmarkClass = isBookmarked
-    ? 'Card__bookmark Card__bookmark--active'
-    : 'Card__bookmark'
-
+export default function Card({
+  title,
+  questionText,
+  answerText,
+  isAnswerVisible,
+}) {
   return (
     <section className="Card">
-      <button className={bookmarkClass} aria-label="Bookmark card"></button>
-      <h2 className="Card__title">{title}</h2>
-      <p>{copyText}</p>
+      <h2>{title}</h2>
+      <p>{questionText}</p>
+      <p className={isAnswerVisible ? 'answerText' : 'hidden'}>{answerText}</p>
     </section>
   )
 }

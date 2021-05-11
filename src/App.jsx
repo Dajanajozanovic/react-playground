@@ -1,14 +1,19 @@
 import * as React from 'react'
-import Button from './Button'
 import Card from './Card'
-import Pagination from './Pagination'
 
 const cards = [
-  { title: 'Hello world!', text: 'How are you?', isBookmarked: false, id: 1 },
   {
-    title: 'Hello again',
-    text: 'I am fine.',
-    isBookmarked: true,
+    title: 'Frage',
+    questionText: 'Wie geht es Dir?',
+    answerText: 'Prima!',
+    isAnswerVisible: false,
+    id: 1,
+  },
+  {
+    title: 'Frage',
+    questionText: 'Was machst Du?',
+    answerText: 'Codes schreiben!',
+    isAnswerVisible: true,
     id: 2,
   },
 ]
@@ -16,12 +21,13 @@ const cards = [
 export default () => {
   return (
     <div className="App">
-      {cards.map(({ id, title, text, isBookmarked }) => (
+      {cards.map(({ id, title, questionText, answerText, isAnswerVisible }) => (
         <Card
           key={id}
           title={title}
-          copyText={text}
-          isBookmarked={isBookmarked}
+          isAnswerVisible={isAnswerVisible}
+          questionText={questionText}
+          answerText={answerText}
         />
       ))}
     </div>
