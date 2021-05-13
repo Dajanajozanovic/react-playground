@@ -3,3 +3,9 @@
   display: grid;
   gap: 40px;
 }
+
+.Box {
+  background-color: hotpink;
+  height: 100px;
+  width: 100px;
+}
